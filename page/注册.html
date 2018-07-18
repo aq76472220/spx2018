@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>注册</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<link rel="stylesheet" href="build/css/ydui.css">
+<link rel="stylesheet" href="css/commonspx.css">
+
+<body style="background: #fff"> 
+    <section class="g-flexview"> 
+        <div class="g-scrollview" style="background: #1de5ff">   
+            
+            <div class="ss-register-box">
+                
+                <!-- logo -->
+                <div class="ss-logo-img mt50">
+                    <img src="images/ss-logo-icon.png" alt="">
+                </div>
+
+                
+
+                <!-- 表单 -->
+                <div class="ss-inp-box ml30 mr30 pt30">
+                    
+                    <!-- 手机号 -->
+                    <div class="ss-login-inp-item mb20 ss-phone-icon">
+                        <input type="text" maxlength="11" placeholder="请输入手机号码" class="wihtec">
+                    </div>
+
+                    <!-- 密码 -->
+                    <div class="ss-login-inp-item mb20 ss-lock-icon">
+                        <input type="password" placeholder="请输入密码" class="wihtec"> 
+                    </div>
+                    
+                    <!-- 图文验证码 -->
+                    <div class="ss-login-inp-item mb20 ss-code-icon relative">
+                        <input type="text" placeholder="验证码" maxlength="4" class="wihtec">
+                        <div class="ss-tw-yzm absolute hmidlle r10"><img src="images/yzm.png" alt=""></div>
+                    </div>
+
+                    <!-- 短信 -->
+                    <div class="ss-login-inp-item mb20 ss-mial-icon relative">
+                        <input type="text" placeholder="短信验证码" maxlength="6" class="wihtec">
+                        <div class="absolute hmidlle r10"><p class="onec fs15 wihtec" id="js-duanxun">获取</p></div>
+                    </div> 
+                </div>
+
+               
+
+                <div class="ss-btn-box mt30 mb30 ml30 mr30">
+                    <a href="javascript:void(0)" class="ss-radius-blue-btn">立即注册</a>
+                </div>
+
+            </div>
+
+        </div> 
+
+         
+    </section>
+    
+    
+</body>
+
+</html>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="build/js/ydui.flexible.js"></script>
+<script src="build/js/ydui.js"></script>
+<script src="js/webuploader.js"></script>
+<script src="js/common.js"></script>
+
+<script type="text/javascript"> 
+     // 发送验证码
+    sedCode('js-duanxun',30, function(code){ 
+        // 异步模拟请求返回 
+        setTimeout(function(){  
+            YDUI.dialog.loading.close(); 
+            code.sendCode('start');
+            YDUI.dialog.toast('已发送', 'success', 1500); 
+        }, 1500);
+    })
+</script>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>我的优惠券</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<link rel="stylesheet" href="build/css/ydui.css">
+<link rel="stylesheet" href="css/commonspx.css">
+
+<body style="background: #fff"> 
+    <section class="g-flexview"> 
+        <div class="g-scrollview">   
+            <div class="ss-main w640 js-tabfather"> 
+                    
+                
+                <!-- tab  -->
+                <div class="relative b-line">
+                    <ul class="ss-flex ss-nav center">
+                        <li class="ss-flex-item nav-item active"><a href="javascript:void(0)">未使用</a></li>
+                        <li class="ss-flex-item nav-item"><a href="javascript:void(0)">已使用</a></li> 
+                    </ul>
+                </div> 
+
+                <!-- 列表 -->
+                <div  class="ss-record-ul-box cont-item"  style="display: block;" id="J_List01">
+                    <ul class="ss-record-ul" id="J_ListContent01">
+                         <!-- 未使用 -->
+                        
+                    </ul>
+                </div>
+
+                <div  class="ss-record-ul-box  cont-item"  style="display: none;" id="J_List02">
+                    <ul class="ss-record-ul" id="J_ListContent02">
+                         <!-- 已使用 -->
+                         
+                    </ul>
+                </div>
+
+              
+ 
+                  
+            </div>    
+        </div> 
+    </section>
+    
+    
+</body>
+
+</html>
+
+<!--    -->
+<script id="J_ListHtml01" type="text/html">
+    {{each list as data}} 
+        <li class="ss-myCoupon-ul-item relative myCoupon-n">
+            <div class='myCoupon-l relative js-myCoupon-l'>
+                <div class="con">
+                    <h2 class="fs16"> <b class="bold">新机</b><span>非曲面</span></h2> 
+                    <p class="fs12 ">串号：<input class='js-cm' style="-webkit-user-select: text;" type="text" readonly='readonly' value='5485421454311241555645'></p>
+                    <p  class="fs12">购买时间：2018-06-26 15:30</p>
+                </div>
+            </div>
+            <div class='myCoupon-r absolute r0 t0 center js-myCoupon-r'>
+                <div class="con">
+                    <h2 class="fs12 ">张某某</h2>
+                    <h3 class="fs20 bold pb5">抵用券</h3>
+                    <a href="javascript:void(0)" class="fs12" onClick="copyUrl(this)">我要使用</a>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</script>
+
+<!--    -->
+<script id="J_ListHtml02" type="text/html">
+    {{each list as data}} 
+        <li class="ss-myCoupon-ul-item relative myCoupon-o">
+            <div class='myCoupon-l relative'>
+                <div class="con">
+                    <h2 class="fs16"> <b class="bold">新机</b><span>非曲面</span></h2>
+                    <p class="fs12">串号：5485421454311241555645</p>
+                    <p  class="fs12">购买时间：2018-06-26 15:30</p>
+                </div>
+            </div>
+            <div class='myCoupon-r absolute r0 t0 center'>
+                <div class="con">
+                    <h2 class="fs12 ">优惠来袭</h2>
+                    <h3 class="fs20 bold pb5">抵用券</h3>
+                    <a href="javascript:void(0)" class="fs12">已使用</a>
+                    <p class="fs12">张某</p>
+                </div>
+            </div>
+        </li>
+    {{/each}}
+</script>
+
+<script src="js/jquery.min.js"></script>
+<script src="build/js/ydui.flexible.js"></script>
+<script src="build/js/ydui.js"></script>
+<script src="js/template.min.js"></script>
+<script src="js/common.js"></script>
+
+
+<script type="text/javascript">
+    
+    scrollmore('https://www.easy-mock.com/mock/5ad402dfded0c91171789709/xunYu/notice','J_List01','J_ListContent01','J_ListHtml01')
+     scrollmore('https://www.easy-mock.com/mock/5ad402dfded0c91171789709/xunYu/notice','J_List02','J_ListContent02','J_ListHtml02')
+
+    // 展开收缩
+    $('.ss-record-ul-box').on('click','.js-toggle',function(){
+        $(this).toggleFn('.js-toggle','.js-ss-record-bot','li')
+    });
+
+    // tab选项卡
+    $('.js-tabfather').Tab({
+        header:'.nav-item',
+        content:'.cont-item'
+    })
+
+    //复制优惠券吗
+    function copyUrl(that){ 
+      var Url=$(that).closest('.js-myCoupon-r').siblings('.js-myCoupon-l').find('.js-cm');
+      Url.select(); // 选择对象
+      document.execCommand("Copy",false, null); // 执行浏览器复制命令
+      toastSuccessFn('抵用券串码已复制，长按粘贴')
+    }
+    
+    
+     
+
+</script>

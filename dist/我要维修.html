@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>我要维修</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<link rel="stylesheet" href="build/css/ydui.css">
+    <link rel="stylesheet" href="css/mobiscroll.min.css">
+<link rel="stylesheet" href="css/commonspx.css">
+
+<body  style="background: #fff!important"> 
+    <section class="g-flexview"> 
+        <div class="g-scrollview">   
+            <div class="ss-main w640"> 
+
+                <div>  
+                    <!-- 标题 -->
+                    <div class="ss-repair-tit pl15 pr15 pt10 pb10 repair01">
+                        手机状态
+                    </div>
+
+                    <div class="">
+                        <div class="m-cell pl15 pr15 b-line-no">  
+                            <div class="cell-item b-line-no">
+                                <div class="cell-left w100">出险时间</div>
+                                <div class="cell-right relative b-line mm-arrow">
+                                    <input type="text"   class="cell-input " id="ss-datetime-day"  placeholder="请选择出险时间"   autocomplete="off" />
+                                </div>
+                            </div>
+
+                            <div class="cell-item b-line-no">
+                                <div class="cell-left w100">出险原因</div>
+                                <label class="cell-right mm-arrow  relative b-line">
+                                    <select class="cell-select fs15">
+                                        <option value="">摔碎了</option>
+                                        <option value="1">摔碎了</option>
+                                        <option value="2">摔碎了</option>
+                                        <option value="3">摔碎了</option>
+                                    </select>
+                                </label>
+                            </div>
+
+
+                            <div class="cell-item b-line-no">
+                                <div class="cell-left w100">出险地点</div>
+                                <div class="cell-right  relative b-line mm-arrow">
+                                   <div class="ss-city ">
+                                       <ul class="ss-city-area" style="display:none"> 
+                                            <li data-val="湖北">湖北
+                                                <ul>
+                                                    <li data-val="武汉">武汉
+                                                        <ul>
+                                                            <li data-val="汉口">汉口</li>
+                                                            <li data-val="武昌">武昌</li> 
+                                                        </ul>
+                                                    </li> 
+                                                    <li data-val="随州">随州
+                                                        <ul>
+                                                            <li data-val="广水">广水</li>
+                                                            <li data-val="孝感">孝感</li> 
+                                                        </ul>
+                                                    </li> 
+                                                </ul>
+                                            </li> 
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cell-item b-line-no">
+                                <div class="cell-left w100">屏幕状态</div>
+                                <label class="cell-right mm-arrow  relative b-line">
+                                    <select class="cell-select fs15">
+                                        <option value="">摔碎了</option>
+                                        <option value="1">摔碎了</option>
+                                        <option value="2">摔碎了</option>
+                                        <option value="3">摔碎了</option>
+                                    </select>
+                                </label>
+                            </div>
+
+
+
+                            <div class="cell-item b-line-no">
+                                <div class="cell-left w100">身份证号</div>
+                                <div class="cell-right relative b-line">
+                                    <input type="text"   class="cell-input"   placeholder="请输入您的身份证号"   autocomplete="off" />
+                                </div>
+                            </div>
+
+                            <div class="cell-item b-line-no">
+                                <div class="cell-left w100 ss-align-items-top pt10">故障描述</div>
+                                <div class="cell-right relative b-line pt10 pb10">
+                                    <textarea class="h100" name="" id="" cols="30" rows="10"  placeholder="请输入故障描述"></textarea> 
+                                </div>
+                            </div> 
+                        </div>
+                        
+                        <!-- 上传图片的标题 --> 
+                        <div class="ss-repair-tit pl15 pr15 pt10 pb10 repair02">
+                            上传照片
+                        </div>
+                            
+                        <!-- 上传图片的位置 -->
+                        <div class="m-cell pl15 pr15 b-line-no">
+                            <div class="cell-left relative mt20">
+                                <ul class="ss-up-imgbox clearfix">
+
+                                    <li class="center mr10 relative">
+                                        <ul class="ss-album-con-upimg" id="js-upimgCont01">
+                                            <!-- 这里是添加图片的位置 -->
+                                        </ul> 
+                                        <div class="img" id="js-filePickerBtn01">
+                                            &nbsp;&nbsp;
+                                        </div>
+                                        <p class="fs12 twoc pt5">手机碎屏照片</p>
+                                    </li>
+
+                                    <li class="center mr10 relative">
+                                        <ul class="ss-album-con-upimg" id="js-upimgCont02">
+                                            <!-- 这里是添加图片的位置 -->
+                                        </ul> 
+                                        <div class="img" id="js-filePickerBtn02">
+                                            &nbsp;&nbsp;
+                                        </div>
+                                        <p class="fs12 twoc pt5">其他</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- 报修人信息标题 --> 
+                        <div class="ss-repair-tit pl15 pr15 pt10 pb10 repair03">
+                            报修人信息
+                        </div>
+
+                        <div class="m-cell pl15 pr15 b-line-no">    
+                            <div class="cell-item b-line-no">
+                                <div class="cell-left w100">真实姓名</div>
+                                <div class="cell-right relative b-line">
+                                    <input type="text"   class="cell-input"   placeholder="请输入真实姓名"   autocomplete="off" />
+                                </div>
+                            </div>
+                            
+                            <div class="cell-item b-line-no">
+                                <div class="cell-left w100">手机号码</div>
+                                <div class="cell-right relative b-line">
+                                    <input type="text"   class="cell-input"   placeholder="请输入手机号码"   autocomplete="off" />
+                                </div>
+                            </div> 
+
+                            <!-- 图片上传 -->
+                            <div class="cell-left relative mt20">
+                                <ul class="ss-up-imgbox clearfix"> 
+                                    <li class="center mr10 relative">
+                                        <ul class="ss-album-con-upimg" id="js-upimgCont03">
+                                            <!-- 这里是添加图片的位置 -->
+                                        </ul> 
+                                        <div class="img" id="js-filePickerBtn03">
+                                            &nbsp;&nbsp;
+                                        </div>
+                                        <p class="fs12 twoc pt5">身份证正面</p>
+                                    </li>
+
+                                    <li class="center mr10 relative">
+                                        <ul class="ss-album-con-upimg" id="js-upimgCont04">
+                                            <!-- 这里是添加图片的位置 -->
+                                        </ul> 
+                                        <div class="img" id="js-filePickerBtn04">
+                                            &nbsp;&nbsp;
+                                        </div>
+                                        <p class="fs12 twoc pt5">身份证反面</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+
+                        </div> 
+
+                    </div> 
+                            
+                    <!-- 按钮 -->
+                    <div class="mt30 mb30  ss-btn-box">
+                         <a href="javascript:void(0)" class="ss-sm-blue-btn">确认提交</a>
+                    </div> 
+
+                </div>
+
+            </div>    
+        </div> 
+            
+          
+    </section>
+    
+    
+</body>
+
+</html>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="build/js/ydui.flexible.js"></script>
+<script src="build/js/ydui.js"></script>
+<script src="js/webuploader.js"></script>
+<script src="js/mobiscroll.min.js"></script> 
+<script src="js/common.js"></script>
+
+<script type="text/javascript"> 
+    // 选择地址select
+    $('.ss-city-area').mobiscroll().treelist({
+        lang: 'zh',
+        theme: 'ios',
+        display: 'bottom',
+        width: [156, 136, 146],
+        inputClass:'box7-input',
+        placeholder: '请选择/省/市/区',
+        headerText:function(valueText){return "请选择地址"}
+    });
+
+
+
+    //选择时间
+    var now = new Date();
+    $('#ss-datetime-day').mobiscroll().datetime({
+        lang: 'zh',
+        theme: 'ios', 
+        timeFormat: 'H:ii', 
+         
+    });
+
+    // 上传图片 这是百度的url ， 回调函数是上传成功的回调函数 data 是后台返回回来的
+    WebUploaderImg('http://mywkya.natappfree.cc/wxweb/spx/uploadPhoto','js-upimgCont01','js-filePickerBtn01', 'file-item-delet-01', 'http://mywkya.natappfree.cc/wxweb/spx/deleteImg', function(data){
+        console.log(data) 
+    },1)
+
+    // 上传图片 这是百度的url ， 回调函数是上传成功的回调函数 data 是后台返回回来的
+    WebUploaderImg('http://mywkya.natappfree.cc/wxweb/spx/uploadPhoto','js-upimgCont02','js-filePickerBtn02', 'file-item-delet-02', 'http://mywkya.natappfree.cc/wxweb/spx/deleteImg', function(data){
+        console.log(data) 
+    },1)
+
+
+
+    // 上传图片 这是百度的url ， 回调函数是上传成功的回调函数 data 是后台返回回来的
+    WebUploaderImg('http://mywkya.natappfree.cc/wxweb/spx/uploadPhoto','js-upimgCont03','js-filePickerBtn03', 'file-item-delet-03', 'http://mywkya.natappfree.cc/wxweb/spx/deleteImg', function(data){
+        console.log(data) 
+    },1)
+
+    // 上传图片 这是百度的url ， 回调函数是上传成功的回调函数 data 是后台返回回来的
+    WebUploaderImg('http://mywkya.natappfree.cc/wxweb/spx/uploadPhoto','js-upimgCont04','js-filePickerBtn04', 'file-item-delet-04', 'http://mywkya.natappfree.cc/wxweb/spx/deleteImg', function(data){
+        console.log(data) 
+    },1)
+
+   
+
+
+  $('.ss-sp-tab-ul li').on('click',function(){
+    if(!$(this).hasClass('active')){
+        $(this).addClass('active').siblings().removeClass('active');
+        $('.tab-cont-item').css('height','0');
+        $('.tab-cont-item').eq($(this).index()).css('height','auto')
+    }
+})
+
+
+</script>

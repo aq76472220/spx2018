@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>我要购买</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+
+<link rel="stylesheet" href="build/css/ydui.css">
+<link rel="stylesheet" href="css/commonspx.css"> 
+<link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.6.0/skins/default/aliplayer-min.css">
+
+
+<body> 
+    <section class="g-flexview"> 
+        <div class="g-scrollview">   
+            <div class="ss-main w640 ">
+                
+                <div class="ss-emption">
+                    <div class="ss-emption-con">
+                        <h2 class="tit clearfix pb10">
+                            <i class="fl fs16 wihtec bold">新机</i> 
+                            <a href="javascript:void(0)" class="fr fs13 wihtec ss-warr js-open-popup">修改</a>
+                        </h2>
+
+                        <div class="bot clearfix">
+                            <i class="fl wihtec fs14">体验套餐</i>
+                            <i class=" wihtec fs14 right block ss-emption-phone">华为畅享7 Plus 4G+64G 中国移动定制(TRT-TL10A) /非曲面</i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="m-cell pl15 pr15">
+                    <div class="cell-item b-line-no">
+                        <div class="cell-left w100">手机串号</div>
+                        <div class="cell-right relative b-line">
+                            <input type="text"   class="cell-input js-hqchao"   placeholder="请输入手机串号"   autocomplete="off" />
+                        </div>
+                    </div>
+  
+
+                    <div class="cell-item b-line-no">
+                        <div class="cell-left w100">手机价格</div>
+                        <div class="cell-right relative b-line">
+                            <input type="text"   class="cell-input" placeholder="请输入手机价格"  autocomplete="off" />
+                        </div>
+                    </div>
+
+                    <!-- <div class="cell-item b-line-no">
+                        <div class="cell-left w100">短信验证码</div>
+                        <div class="cell-right relative b-line relative">
+                            <input type="tel"   class="cell-input" placeholder="请输入短信验证码" maxlength="6"  autocomplete="off" />
+                            <a href="javascript:void(0)" class="absolute r0 fs15 onec ss-yzm-btn" id="js-duanxun">获取</a>
+                        </div>
+                    </div> -->
+                     
+
+                     <div class="cell-item b-line-no">
+                        <div class="cell-left w100">用户姓名</div>
+                        <div class="cell-right relative b-line">
+                            <input type="text"   class="cell-input" placeholder="请输入用户姓名"  autocomplete="off" />
+                        </div>
+                    </div>
+                     
+                     <div class="cell-item b-line-no">
+                        <div class="cell-left w100">身份证号</div>
+                        <div class="cell-right relative b-line">
+                            <input type="text"   class="cell-input" placeholder="请输入真实有效的证件号码"   autocomplete="off" />
+                        </div>
+                    </div>
+                     
+
+                     <div class="cell-item b-line-no">
+                        <div class="cell-left w100 ss-align-items-top pt10">上传图片</div>
+                        <div class="cell-right">
+                            <a href="./上传图片协议.html"  class="ss-upimg-about bluec fs15"> 上传图片要求</a>
+                        </div>
+                    </div> 
+
+                    <div class="cell-item b-line-no"> 
+                        <div class="cell-left relative">
+                            <ul class="ss-up-imgbox clearfix">
+
+                                <li class="center mr10 relative">
+                                    <ul class="ss-album-con-upimg" id="js-upimgCont01">
+                                        <!-- 这里是添加图片的位置 -->
+                                    </ul> 
+                                    <div class="img" id="js-filePickerBtn01">
+                                        &nbsp;&nbsp;
+                                    </div>
+                                    <p class="fs12 twoc pt5">手机正面IEMI</p>
+                                </li>
+
+                                <li class="center mr10 relative">
+                                    <ul class="ss-album-con-upimg" id="js-upimgCont02">
+                                        <!-- 这里是添加图片的位置 -->
+                                    </ul> 
+                                    <div class="img" id="js-filePickerBtn02">
+                                        &nbsp;&nbsp;
+                                    </div>
+                                    <p class="fs12 twoc pt5">发票和盒子</p>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div> 
+
+
+                    <div class="cell-item b-line-no">
+                        <div class="cell-left w100 ss-align-items-top pt10">上传视频 <i class="threec">（wifi上传）</i></div>
+                        <div class="cell-right">
+                            <a href="javascript:void(0)" class="ss-upimg-about bluec fs15"> 上传视频要求</a>
+                        </div>
+                    </div> 
+
+                    <div class="cell-item b-line-no  wb100"> 
+                        <div class="cell-left relative wb100">
+                            <!-- 这里是视频上传 -->
+
+                            <div class="wb100 ">
+                                
+                                <div class="clearfix mb10 mt20">
+                                    <div class="  btn btn-warning ss-video-btn-box relative fl">
+                                         <i>选择视频</i>
+                                        <input type="file"   name="file" id="files" class="" capture="camera" accept="video/*" multiple="">
+                                    </div>
+                                    
+                                    <div class=" fl ml10"> 
+                                        <a href="javascript:void(0)" class="btn btn-primary" onclick="start()">开始上传</a>
+                                    </div>
+                                </div> 
+                                
+                                <div class="relative mb20">
+                                    <!-- 默认位置 -->
+                                    <div class="ss-video-box on" >
+                                        <div class="ss-video-box-fixd"> 
+                                            <!-- 上传进度 -->
+                                            <div class="ss-loading-box"  style="display: none">
+                                                <div class="ss-loading-box-con">
+                                                    <h2 class="tit pb10"> <i class="percent-font">正在上传</i> <span id="percent">0.00%</span> </h2>
+                                                    <div class="loading">
+                                                        <p class="progress" id="progress"></p>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div> 
+                                    <!-- 视频播放位置 --> 
+                                    <video class="prism-player" id='J_prismPlayer' controls="controls">
+                                        您的浏览器不支持 video 标签。
+                                    </video>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div> 
+
+                    <div class="cell-item pl0 mt10 mb20 mt0 pb10"> 
+                        <label class="cell-right cell-item-center">
+                            <input type="checkbox" name="checkbox" checked="checked" />
+                            <i class="cell-checkbox-icon"></i>
+                            <p class="ss-checkbox-tip left pl10 fs12">我已阅读并同意 <i class="bluec">《碎屏服务保障协议》</i></p>
+                        </label> 
+                    </div>  
+                </div>
+
+            </div>   
+               
+        </div> 
+    
+
+        <footer class="m-tabbar">
+            <div class="ss-footer-customer js-kefu">
+                <img src="images/ss-kefu.png" alt="">
+                <p class="fs12 twoc">咨询</p>
+            </div>
+
+            <div class="fs14 onec">
+                价格 <i class="redc fs17 ">￥169</i>
+            </div>
+
+            <div class="absolute r0 t0">
+                <a href="javascript:void(0)" class="ss-buy-btn js-ss-buy-btn">立即购买</a>
+            </div>
+        </footer> 
+
+    </section>
+    
+    <!-- 选择套餐弹框 -->
+    <div class="ss-login-con ss-popup-container js-ss-popup-container-01">
+        <div class="ss-popup-mask"></div>
+        <article class="ss-popup-modal">
+            <div class="clearfix  ss-popup-header relative">
+                <p class="center onec">请选择</p>
+                <a href="javascript:void(0)" class=" absolute  ss-login-close  js-close-popup fs14 threec">关闭</a>
+            </div>
+
+            <div class="mt10 mr15 pb10 ml15 ss-popup-wepper">
+                <ul class="ss-popup-emption-box">
+                    <li>
+                        <h3 class="tit ss-chanzt01 fs14">屏幕状态</h3>
+
+                        <ul class="clearfix ss-popup-emption-tab js-tab" data-type='001'>
+                            <li class="active"><a href="javascript:void(0)">新机(激活15天内)</a></li>
+                            <li><a href="javascript:void(0)">旧机(激活15天以上)</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="ss-popup-emption-box">
+                    <li>
+                        <h3 class="tit ss-chanzt02 fs14">屏幕类型 </h3>
+
+                        <ul class="clearfix ss-popup-emption-tab js-tab" data-type='002'>
+                            <li class="active"><a href="javascript:void(0)">曲面</a></li>
+                            <li><a href="javascript:void(0)">非曲面</a></li>
+                            <li><a href="javascript:void(0)">特殊屏</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="ss-popup-emption-box">
+                    <li>
+                        <h3 class="tit ss-chanzt03 fs14">品牌型号</h3>
+
+                        <ul class="clearfix ss-popup-emption-tab">
+                            <li class=" ss-select"> 
+                                <select name="" id="">
+                                    <option value="1">apple</option>
+                                </select> 
+                            </li>
+                            <li class=" ss-select"> 
+                                <select name="" id="">
+                                    <option value="1">品牌型号品牌</option>
+                                    <option value="1">iphone4</option>
+                                    <option value="1">iphone4</option>
+                                    <option value="1">iphone4</option>
+                                    <option value="1">iphone4</option>
+                                    <option value="1">iphone4</option>
+                                </select> 
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <ul class="ss-popup-emption-box">
+                    <li>
+                        <h3 class="tit ss-chanzt04 fs14">套餐服务</h3>
+
+                        <ul class="clearfix ss-popup-emption-tab js-tab" data-type='003'>
+                            <li class="active"><a href="javascript:void(0)">体验套餐</a></li>
+                            <li><a href="javascript:void(0)">基础套餐</a></li>
+                            <li><a href="javascript:void(0)">至尊套餐</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <p class="fs16 twoc pt5 pb5">1个月/ <i class="redc">¥163.00</i></p>
+                
+                <div class="cell-item pl0 b-line-no pt10"> 
+                    <label class="cell-right flex-left h40 ">
+                        <input type="checkbox" name="checkbox" checked="checked" />
+                        <i class="cell-checkbox-icon"></i>
+                        <p class="ss-checkbox-tip left pl10 fs14">延期维修10天 <i class="ss-checkbox-tip-about js-sm01 fr"></i> </p>
+                        <p class="absolute r0 fs15 bluec">¥6.00</p>
+                    </label>
+                </div>
+ 
+
+                <div class="cell-item b-line-no pl0"> 
+                    <label class="cell-right flex-left h30">
+                        <input type="checkbox" name="checkbox" />
+                        <i class="cell-checkbox-icon"></i>
+                        <p class="ss-checkbox-tip left pl10 fs14">8折购机 <i class="ss-checkbox-tip-about js-sm02 fr"></i></p>
+                        <p class="absolute r0 fs15 bluec">¥2.00</p>
+                    </label>
+                </div>
+
+                <div class="cell-item b-line-no pl0"> 
+                    <label class="cell-right flex-left h30">
+                        <input type="checkbox" name="checkbox" />
+                        <i class="cell-checkbox-icon"></i>
+                        <p class="ss-checkbox-tip left pl10 fs14">一年二次非内屏维修价格 <i class="ss-checkbox-tip-about js-sm03 fr"></i></p>
+                        <p class="absolute r0 fs15 bluec">¥2.00</p>
+                    </label>
+                </div>
+
+                <div class="cell-item b-line-no pl0"> 
+                    <label class="cell-right flex-left h30">
+                        <input type="checkbox" name="checkbox" />
+                        <i class="cell-checkbox-icon"></i>
+                        <p class="ss-checkbox-tip left pl10 fs14">延长2年碎屏服务价格 <i class="ss-checkbox-tip-about js-sm04 fr"></i></p>
+                        <p class="absolute r0 fs15 bluec">¥2.00</p>
+                    </label>
+                </div>
+
+                <div class="clearfix pt15 pb15 threec t-line relative mt10">
+                    <span class="fl ss-discount-about js-yhjmian-click">优惠减免</span>
+                    <span class="fr">总计</span>
+                </div>
+
+                <div class="ss-numblst-box" >
+                    <div class="ss-numblst fl  js-yhjmian-box" style="display: none">
+                       <!-- 加减 -->
+                    </div> 
+                    <p class="fr redc fs16">¥169.00</p>
+                </div>
+
+            </div>
+
+            <div class="ss-popup-bottom">
+                <a href="javascript:void(0)">确定</a>
+            </div>
+        </article> 
+    </div>
+
+    <!-- 选择支付方式弹框 -->
+    <div class="ss-login-con ss-popup-container js-ss-popup-container-02">
+        <div class="ss-popup-mask"></div>
+        <article class="ss-popup-modal h320" >
+            <div class="clearfix  ss-popup-header relative">
+                <p class="center onec">请选择</p>
+                <a href="javascript:void(0)" class=" absolute  ss-login-close  js-close-popup fs14 threec">关闭</a>
+            </div>
+
+            <div class="mt10 mr15 pb10 ml15 ss-popup-wepper">
+                <div class="m-cell b-line-no">
+                    <label class="cell-item b-line-no js-radio-line">
+                        <span class="cell-left wx-icon">微信支付</span>
+                        <label class="cell-right">
+                            <input type="radio" name="radio" checked />
+                            <i class="cell-checkbox-icon"></i>
+                        </label>
+                    </label>
+                    <label class="cell-item b-line-no js-radio-line">
+                        <span class="cell-left yhq-icon">优惠券支付</span>
+                        <label class="cell-right">
+                            <input class="js-ss-yhq-radio" type="radio" name="radio" />
+                            <i class="cell-checkbox-icon"></i>
+                        </label>
+                    </label>
+
+                    <label class="cell-item b-line-no mt10 js-ss-yhq-inp-box" style="display: none">
+                        <div class="ss-yhq-inp">
+                            <input class="fs14 onec" type="text" placeholder="请输入优惠券串号">
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="ss-popup-bottom">
+                <a href="javascript:void(0)">去支付</a>
+            </div>
+        </article> 
+    </div>
+
+</body>
+
+</html>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="build/js/ydui.flexible.js"></script>
+<script src="build/js/ydui.js"></script>
+<script src="js/webuploader.js"></script> 
+<!-- 视频上传 -->
+<script src="js/allib/es6-promise.min.js"></script>
+<script src="js/allib/aliyun-oss-sdk4.13.2.min.js"></script> 
+<script src="js/allib/aliyun-upload-sdk1.3.1.min.js"></script> 
+<script type="text/javascript" src="https://g.alicdn.com/de/prismplayer/2.6.0/aliplayer-h5-min.js"></script>
+<!-- 视频上传 -->
+<script src="js/common.js"></script>
+
+<script type="text/javascript">
+    // 显示隐藏radio
+    $('.js-radio-line').on('click',function(){
+        if($('.js-ss-yhq-radio').is(':checked')){
+            $('.js-ss-yhq-inp-box').show();
+        }else{
+            $('.js-ss-yhq-inp-box').hide();
+        }
+        
+    })
+
+    // 弹出说明
+    $('.js-sm01').on('click',function(event){ 
+        alertFn('<p class="twoc">a.超期维修补偿服务（5天）<br />注释：速易保碎屏服务保证在3~5个工作日内完成维修并返还至顾客手中，超期补偿客户200元现金红包。</p>') 
+        return false
+    });
+
+    // 弹出说明
+    $('.js-sm02').on('click',function(event){ 
+        alertFn('<p class="twoc">b.手机保修延长服务（6个月）<br />注释：可享受手机保修服务延长6个月。合计保修期限为购买起18个月。</p>') 
+        return false
+    })
+
+    // 弹出说明
+    $('.js-sm03').on('click',function(event){ 
+        alertFn('<p class="twoc">c.享受保修期2次维修服务（非内屏）<br />注释：可享受速易保碎屏服务保修期内2次维修屏幕服务（第二次为非内屏维修服务）。</p>') 
+        return false
+    })
+
+    // 弹出说明
+    $('.js-sm04').on('click',function(event){ 
+        alertFn('<p class="twoc">d.延长至2年碎屏服务<br />注释：可享受速易保碎屏服务延长12个月屏幕保修服务。合计保修期限为24个月。</p>') 
+        return false
+    })
+
+    // 选择套餐弹框
+    $('.js-close-popup').on('click',function(){
+        $('.js-ss-popup-container-01').loginClose()
+    })
+
+    $('.js-open-popup').on('click',function(){
+        $('.js-ss-popup-container-01').loginOpen()
+    })
+
+    // 选择支付方式弹框
+    $('.js-close-popup').on('click',function(){
+        $('.js-ss-popup-container-02').loginClose()
+    })
+
+    $('.js-ss-buy-btn').on('click',function(){
+        $('.js-ss-popup-container-02').loginOpen()
+    }) 
+
+    // 加减  
+    $(".ss-numblst").Spinner({ value: 50, min: 0, max: 60 }, function(data){
+        console.log(data)
+    })
+
+    //tab
+    $('.js-tab').tabNav({
+        child:'li',
+        on: 'active'
+    }, function(html,type){
+        console.log(type)
+        console.log(html)
+    })
+ 
+
+    // 发送验证码
+    sedCode('js-duanxun',30, function(code){ 
+        // 异步模拟请求返回 
+        setTimeout(function(){  
+            YDUI.dialog.loading.close(); 
+            code.sendCode('start');
+            YDUI.dialog.toast('已发送', 'success', 1500); 
+        }, 1500);
+    })
+
+    // 是否显示加减 
+    $('.js-yhjmian-click').click(function(event) {
+        if($('.js-yhjmian-box').is(':hidden')){
+            $('.js-yhjmian-box').show()
+        }else{
+            $('.js-yhjmian-box').hide()
+        }
+    });
+
+    // 客服
+    $('.js-kefu').on('click',function(){
+        alertFn('<span class="onec pt10 block">客服热线：400-8330-226<span>')
+    })
+
+    var isTk = true
+    // 获取串号
+    $('.js-hqchao').on('click',function(){  
+        if(isTk==true){
+            alertFn('在手机拨号界面输：<span class="redc">“*#06#”<span>')
+            $(this).data('isTk','false')
+            isTk=false
+        } 
+    })
+
+    // 上传图片 这是百度的url ， 回调函数是上传成功的回调函数 data 是后台返回回来的
+    WebUploaderImg('http://mywkya.natappfree.cc/wxweb/spx/uploadPhoto','js-upimgCont01','js-filePickerBtn01', 'file-item-delet-01', 'http://mywkya.natappfree.cc/wxweb/spx/deleteImg', function(data){
+        console.log(data) 
+    },1)
+
+    // 上传图片 这是百度的url ， 回调函数是上传成功的回调函数 data 是后台返回回来的
+    WebUploaderImg('http://mywkya.natappfree.cc/wxweb/spx/uploadPhoto','js-upimgCont02','js-filePickerBtn02', 'file-item-delet-02', 'http://mywkya.natappfree.cc/wxweb/spx/deleteImg', function(data){
+        console.log(data) 
+    },1)
+
+
+     function getObjectURL(file) {
+             var url = null ;
+             if (window.createObjectURL!=undefined) { // basic
+                 url = window.createObjectURL(file) ;
+             } else if (window.URL!=undefined) { // mozilla(firefox)
+                 url = window.URL.createObjectURL(file) ;
+             } else if (window.webkitURL!=undefined) { // webkit or chrome
+                 url = window.webkitURL.createObjectURL(file) ;
+             }
+             return url;
+      }
+
+
+
+    // 根目录
+    var root ='http://6xbc6y.natappfree.cc';
+    var uploader = new AliyunUpload.Vod({
+            // 文件上传失败
+            onUploadFailed: function (uploadInfo, code, message) {
+                 alertFn('上传失败！') 
+            },
+            // 文件上传完成
+            onUploadSucceed: function (uploadInfo) {
+                toastSuccessFn('上传成功！',1000)
+                $('.ss-video-box').addClass('on').find('.ss-loading-box').hide()
+                var objUrl = getObjectURL(uploadInfo.file); 
+                $('#J_prismPlayer').show();
+                $('#J_prismPlayer').attr('src',objUrl) 
+               
+            },
+            // 文件上传进度
+            onUploadProgress: function (uploadInfo, totalSize, loadedPercent) { 
+                $('#percent').html((loadedPercent * 100.00).toFixed(2) + "%");
+                $('#progress').css('width',(loadedPercent * 100.00).toFixed(2) + "%") 
+            }, 
+            // 开始上传 自定义事件
+            'onUploadstarted': function (uploadInfo) {
+                    $('#J_prismPlayer').hide();
+                    $('.ss-video-box').removeClass('on').find('.ss-loading-box').show()
+                    if(!uploadInfo.file.name){
+                         alertFn('请选择视频');
+                         return 
+                    }
+
+                    // 开始上传设置样式 
+                    if(!uploadInfo.videoId){
+
+                        //mock 上传凭证，实际产品中需要通过接口获取 
+                        //实际环境中调用调用点播的获取上传凭证接口
+                       Url=root+/wxweb/+'vod/uploadAuth';
+                           //请求后台发送验证码 TODO
+                           $.ajax({
+                               url:Url,
+                               data:{filename:uploadInfo.file.name},
+                               dataType:'JSON',
+                               success:function (data) {
+                                uploadAuth= data.obj.uploadAuth;
+                                uploadAddress = data.obj.uploadAddress;
+                                videoId = data.obj.videoId; 
+                                uploader.setUploadAuthAndAddress(uploadInfo, uploadAuth, uploadAddress,videoId);
+                               },error:function () {
+
+                                   $('.ss-video-box').addClass('on').find('.ss-loading-box').hide()
+                                   alertFn('请检查您的网络！') 
+                                   return false;
+                               }
+                           });
+                        
+                    }
+                    else{
+                        //如果videoId有值，根据videoId刷新上传凭证  
+                        Url=root+/wxweb/+'vod/refreshuploadAuth';
+                        //请求后台发送验证码 TODO
+                        $.ajax({
+                            url:Url,
+                            data:{videoId:uploadInfo.videoId},
+                            dataType:'JSON',
+                            success:function (data) {
+                                uploadAuth= data.obj.uploadAuth;
+                                uploadAddress = data.obj.uploadAddress;
+                                //获取上传凭证后，调用setUploadAuthAndAddress
+                                uploader.setUploadAuthAndAddress(uploadInfo, uploadAuth, uploadAddress);
+                            },error:function () {
+                                $('.ss-video-box').addClass('on').find('.ss-loading-box').hide()
+                                alertFn('请检查您的网络！')
+                                return false;
+                            }
+                        });
+                        
+                    }
+                
+                
+            }
+            ,
+            'onUploadEnd':function(uploadInfo){
+                //log("onUploadEnd: uploaded all the files");
+            }
+        });
+
+    // 点播上传。每次上传都是独立的鉴权，所以初始化时，不需要设置鉴权
+    // 临时账号过期时，在onUploadTokenExpired事件中，用resumeWithToken更新临时账号，上传会续传。
+    var selectFile = function (event) {
+           uploader.cleanList();
+           $('#J_prismPlayer').hide();
+           $('#percent').html("0.00%");
+           $('#progress').css('width', "0%");
+           $('.ss-video-box').addClass('on').find('.ss-loading-box').show()
+           $('.ss-loading-box').hide();
+           userData = '{"Vod":{"UserData":{"IsShowWaterMark":"false","Priority":"7"}}}'; 
+            for(var i=0; i<event.target.files.length; i++) { 
+               // 点播上传。每次上传都是独立的OSS object，所以添加文件时，不需要设置OSS的属性
+               uploader.addFile(event.target.files[i], null, null, null, userData); 
+            }
+        }; 
+    document.getElementById("files").addEventListener('change', selectFile); 
+    // 开始上传
+    function start() {  
+        uploader.startUpload();
+    }
+</script>

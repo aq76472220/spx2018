@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>登录</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<link rel="stylesheet" href="build/css/ydui.css">
+<link rel="stylesheet" href="css/commonspx.css">
+
+<body style="background: #fff"> 
+    <section class="g-flexview"> 
+        <div class="g-scrollview" style="background: #50b5fd">   
+            
+            <div class="ss-login-box" >
+                
+                <!-- logo -->
+                <div class="ss-logo-img mt50">
+                    <img src="images/ss-logo-icon.png" alt="">
+                </div>
+
+                <!-- tab -->
+                <ul class="ss-logo-tab ss-row center mt30 js-nav-tab">
+                    <li class="ss-col-6 active"> <a href="javascript:void(0)">普通登录</a> </li>
+                    <li class="ss-col-6"> <a href="javascript:void(0)">手机登录</a> </li>
+                </ul>
+
+                <!-- 表单 -->
+                <div class="ss-inp-box ml30 mr30 mt30">
+                    
+                    <!-- 手机号 -->
+                    <div class="ss-login-inp-item mb20 ss-phone-icon">
+                        <input type="text" maxlength="11" placeholder="请输入手机号码" class="wihtec">
+                    </div>
+                    
+                    <!-- 图文验证码 -->
+                    <div class="ss-login-inp-item mb20 ss-code-icon relative hidden js-mail-inp">
+                        <input type="text" placeholder="验证码" maxlength="4" class="wihtec">
+                        <div class="ss-tw-yzm absolute hmidlle r10"><img src="images/yzm.png" alt=""></div>
+                    </div>
+
+                    <!-- 短信 -->
+                    <div class="ss-login-inp-item mb20 ss-mial-icon relative hidden js-mail-inp">
+                        <input type="text" placeholder="短信验证码" maxlength="6" class="wihtec">
+                        <div class="absolute hmidlle r10"><p class="onec fs15 wihtec" id="js-duanxun">获取</p></div>
+                    </div>
+
+
+                    <!-- 密码 -->
+                    <div class="ss-login-inp-item ss-lock-icon js-password-inp">
+                        <input type="password" placeholder="请输入密码" class="wihtec"> 
+                    </div>
+
+                </div>
+
+                <div class="clearfix ml30 mr30 mt30">
+                    <i href="javascript:void(0)" class="fl wihtec">没有账号，<a href="javascript:void(0)" class="redc">马上注册</a></i>
+                    <a href="javascript:void(0)" class="fr wihtec">忘记密码？</a>
+                </div>
+
+                <div class="ss-btn-box mt30 mb30 ml30 mr30">
+                    <a href="javascript:void(0)" class="ss-radius-blue-btn">立即登录</a>
+                </div>
+
+            </div>
+
+        </div> 
+
+         
+    </section>
+    
+    
+</body>
+
+</html>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="build/js/ydui.flexible.js"></script>
+<script src="build/js/ydui.js"></script>
+<script src="js/webuploader.js"></script>
+<script src="js/common.js"></script>
+
+<script type="text/javascript">
+    // tab
+    $('.js-nav-tab').tabNav({},function(index){
+        if(index==0){
+            $('.js-mail-inp').hide();
+            $('.js-password-inp').show()
+        }else{
+            $('.js-mail-inp').show()
+            $('.js-password-inp').hide()
+        } 
+    })
+
+     // 发送验证码
+    sedCode('js-duanxun',30, function(code){ 
+        // 异步模拟请求返回 
+        setTimeout(function(){  
+            YDUI.dialog.loading.close(); 
+            code.sendCode('start');
+            YDUI.dialog.toast('已发送', 'success', 1500); 
+        }, 1500);
+    })
+</script>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>购买优惠券</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<link rel="stylesheet" href="build/css/ydui.css">
+<link rel="stylesheet" href="css/commonspx.css">
+
+<body style="background: #fff"> 
+    <section class="g-flexview"> 
+        <div class="g-scrollview">   
+            <div class="ss-main w640">  
+
+                <div class="ss-coupon-mian  pb10   mt10">
+                    <ul class="ss-popup-emption-box">
+                        <li>
+                            <h3 class="tit fs14 pl0">屏幕状态</h3>
+
+                            <ul class="clearfix ss-popup-emption-tab js-tab" data-type='001'>
+                                <li class="active"><a href="javascript:void(0)">新机(激活15天内)</a></li>
+                                <li><a href="javascript:void(0)">旧机(激活15天以上)</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <ul class="ss-popup-emption-box">
+                        <li>
+                            <h3 class="tit  fs14 pl0">屏幕类型 </h3>
+
+                            <ul class="clearfix ss-popup-emption-tab js-tab" data-type='002'>
+                                <li class="active"><a href="javascript:void(0)">曲面</a></li>
+                                <li><a href="javascript:void(0)">非曲面</a></li>
+                                <li><a href="javascript:void(0)">特殊屏</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <ul class="ss-popup-emption-box">
+                        <li>
+                            <h3 class="tit  fs14 pl0">购买数量 </h3>
+
+                             <div class="ss-numblst-box mt5" >
+                                <div class="ss-numblst fl  js-yhjmian-box">
+                                   <!-- 加减 -->
+                                </div>  
+                            </div>
+                        </li>
+                    </ul> 
+
+                    <div class="ss-coupon-box mt20 clearfix">
+                        <div class="ss-coupon-l fl">
+                            <h2 class="font01">新机 非曲面 <i class="fs12">（激活15天内）</i></h2> 
+                            <p class="font02">¥<b class="bold">100</b></p>
+                            <p class="font03">此券可直接抵用碎屏险售价</p>
+                        </div>
+
+                        <div class="ss-coupon-r fl">
+                            <h2 class="font01">优惠来袭</h2>
+                            <p class="font02">抵用券</p>
+                            <a href="javascript:void(0)">用户福利</a>
+                        </div>
+                    </div>
+                    
+                    <div class="mt30 mb30  ss-btn-box">
+                     <a href="javascript:void(0)" class="ss-sm-blue-btn">立即购买</a>
+                </div> 
+                </div>
+                
+                
+
+            </div>    
+        </div> 
+            
+          
+    </section>
+    
+    
+</body>
+
+</html>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="build/js/ydui.flexible.js"></script>
+<script src="build/js/ydui.js"></script>
+<script src="js/webuploader.js"></script>
+<script src="js/common.js"></script>
+
+<script type="text/javascript">
+
+
+    // 加减  
+    $(".ss-numblst").Spinner({ value: 0, min: 0, max: 60, type:''}, function(data){
+        console.log(data)
+    })
+
+    //tab
+    $('.js-tab').tabNav({
+        child:'li',
+        on: 'active'
+    }, function(html,type){
+        console.log(type)
+        console.log(html)
+    })
+     
+
+</script>

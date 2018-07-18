@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>维修站点</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+</head>
+<link rel="stylesheet" href="build/css/ydui.css">
+<link rel="stylesheet" href="css/commonspx.css">
+
+<body> 
+    <section class="g-flexview"> 
+        <div class="g-scrollview">   
+            <div class="ss-main w640 js-tabfather"> 
+                    
+                
+                <!-- tab  -->
+                <div class="">
+                    <ul class="ss-flex ss-nav center">
+                        <li class="ss-flex-item nav-item active"><a href="javascript:void(0)">待维修</a></li>
+                        <li class="ss-flex-item nav-item"><a href="javascript:void(0)">维修中</a></li>
+                        <li class="ss-flex-item nav-item"><a href="javascript:void(0)">已完成</a></li>
+                    </ul>
+                </div> 
+
+                <!-- 列表 -->
+                <div  class="ss-repair-ul-box cont-item"  style="display: block;" id="J_List01">
+                    <ul class="ss-repair-ul" id="J_ListContent01">
+                         <!-- 非曲面 -->
+                         <li>
+                            <div  class="ss-repair-ul-item-t">
+                                <div class="ss-repair-ul-item-con relative">
+                                    <div class="font pl15 pr30"> 
+                                        <h2 class="pb5">HUAWEI Mate 9 保时</h2>
+                                        <p class="fs12 threec">IMEI编号：869630010707101</p>
+                                        <p class="fs12 threec">报案时间：2017-09-01 10:07:00</p>
+                                        <p class="fs12 threec">手机号码：15056029634</p>  
+                                    </div>
+
+                                    <div class="absolute r5 t0 fs13 bluec">王某</div>
+                                    <a href="###" class="absolute vmiddle r0 btn btn-primary fs12">确认维修</a>
+
+                                    <i class="ss-detail-btn absolute r5 b0 js-toggle">详情</i>
+                                </div>
+                            </div>
+
+                            <div class="ss-repair-ul-item-b">
+                                <div class="fs12 threec pl5 pr5">
+                                    <p>保单号码：PDAA008350XXXXXXXXXX</p>
+                                    <p>身份证号：340828199506157862</p>
+                                    <p>碎屏原因：碎屏</p>
+                                    <p>屏幕状态：xxxxxxxxxxxxxxxxxxxxxx</p>
+                                    <p>报修方式：亲自到店</p>
+                                    <p>上传照片：</p>
+                                </div>
+
+                                <div class="ss-row mt10 mb10"> 
+                                    <div class="ss-col-4">
+                                        <div class="ss-repair-img ml5 mr5">
+                                            <img src="images/img01.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="ss-col-4">
+                                        <div class="ss-repair-img ml5 mr5">
+                                            <img src="images/img01.png" alt="">
+                                        </div>
+                                    </div>
+
+                                    <div class="ss-col-4">
+                                        <div class="ss-repair-img ml5 mr5">
+                                            <img src="images/img01.png" alt="">
+                                        </div>
+                                    </div> 
+                                </div>
+
+                                <div class="ss-row mt10 mb10 ss-repair-step-box">
+                                    
+                                    <div class="ss-col-4"> 
+                                        <img src="images/r01-light.png" alt="">
+                                        <h2 class="center fs12 twoc">接受维修</h2>
+                                        <p>2017-09-01 10:07:00</p> 
+                                    </div>
+
+                                </div>
+                            </div>
+
+                         </li>
+                    </ul>
+                </div>
+
+                <div  class="ss-repair-ul-box  cont-item"  style="display: none;" id="J_List02">
+                    <ul class="ss-repair-ul" id="J_ListContent02">
+                         <!-- 曲面 -->
+                    </ul>
+                </div>
+
+                <div  class="ss-repair-ul-box  cont-item"  style="display: none;" id="J_List03">
+                    <ul class="ss-repair-ul" id="J_ListContent03">
+                         <!-- 特殊屏 -->
+                    </ul>
+                </div>
+
+ 
+                  
+            </div>    
+        </div> 
+    </section>
+    
+    
+</body>
+
+</html>
+
+<!-- 阅读领悟 新闻资讯 模板 -->
+<script id="J_ListHtml01-02-03" type="text/html">
+    {{each list as data}} 
+         <li class="ss-record-ul-item relative ">
+            <div class="s-sc absolute"></div>
+            <div class="clearfix">
+                <div class="ss-record-ul-item-l fl">
+                    <div class="pl10 pr10 mt20 mb20 relative">
+                        <i class="fs16 absolute r10 t10 wihtetc">1年</i>
+                        <h2 class="wihtec fs15 mb5 pr30">HUAWEI Mate 9 保时 </h2>
+                        <p>保单状态：投保成功</p>
+                        <p>手机号码：15056029634</p> 
+                    </div>
+                </div>
+                <div class="ss-record-ul-item-r fl relative">
+                    <div class="center pt15">
+                        <a href="javascript:void(0)" class="ss-s-blue-btn">张某</a>
+                        <p class="center fs17 redc bold pt10 ">¥169.00</p>
+
+                        <i class="ss-detail-btn js-toggle">详情</i>
+                    </div>
+                </div>
+            </div>
+            <div class="ss-record-bot pt15 pb15 pl10 pr10 js-ss-record-bot" style="display: none">
+                <ul class="ss-record-bot-ul">
+                    <li class="fs13 onec">申请时间：2017-08-22</li>
+                    <li class="fs13 onec">真实姓名：张某</li>
+                    <li class="fs13 onec">身份证号：340828199506157862</li>
+                    <li class="fs13 onec">保险起期：2017-08-22</li>
+                    <li class="fs13 onec">保险止期：2018-08-22</li>
+                    <li class="fs13 onec">保单号码：PDAA008350XXXXXXXXXX</li>
+                    <li class="fs13 onec">购买价格：1559元</li>
+                    <li class="fs13 onec">IEMI编号：mix</li> 
+                </ul>
+            </div>
+        </li>
+    {{/each}}
+</script>
+
+
+<script src="js/jquery.min.js"></script>
+<script src="build/js/ydui.flexible.js"></script>
+<script src="build/js/ydui.js"></script>
+<script src="js/template.min.js"></script>
+<script src="js/common.js"></script>
+
+<script type="text/javascript">
+    
+    // scrollmore('https://www.easy-mock.com/mock/5ad402dfded0c91171789709/xunYu/notice','J_List01','J_ListContent01','J_ListHtml01-02-03')
+    // scrollmore('https://www.easy-mock.com/mock/5ad402dfded0c91171789709/xunYu/notice','J_List02','J_ListContent02','J_ListHtml01-02-03')
+    // scrollmore('https://www.easy-mock.com/mock/5ad402dfded0c91171789709/xunYu/notice','J_List03','J_ListContent02','J_ListHtml01-02-03')
+
+    // 展开收缩
+    $('.ss-record-ul-box').on('click','.js-toggle',function(){
+        $(this).toggleFn('.js-toggle','.js-ss-record-bot','li')
+    });
+
+    // tab选项卡
+    $('.js-tabfather').Tab({
+        header:'.nav-item',
+        content:'.cont-item'
+    })
+    
+     
+
+</script>
